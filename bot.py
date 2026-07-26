@@ -6,7 +6,7 @@ import base64
 import requests
 import random
 import os 
-from flask import flask , request 
+from flask import Flask , request 
 
 BOT_API = os.getenv("BOT_API")
 GROQ_KEY = os.getenv("GROQ_KEY")
