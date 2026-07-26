@@ -198,7 +198,7 @@ def chat_handler(message):
         bot.reply_to(message, str(e)[:4096])
 
 # Webhook endpoint _______________________________________#########################################################
-@app.route(f"/webhook/{BOT_TOKEN}", methods=["POST"])
+@app.route(f"/webhook/{BOT_API}", methods=["POST"])
 def webhook():
     if request.headers.get("content-type") == "application/json":
         update = telebot.types.Update.de_json(request.get_data().decode("utf-8"))
