@@ -1,5 +1,5 @@
 from groq import Groq
-from config import *
+
 import telebot
 import json
 import base64
