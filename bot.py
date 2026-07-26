@@ -212,11 +212,11 @@ def home():
     return "Bot is running!"
 
 if __name__ == "__main__":
-    if not BOT_TOKEN:
-        raise ValueError("BOT_TOKEN environment variable is missing!")
+    if not BOT_API:
+        raise ValueError("BOT_API environment variable is missing!")
 
     if RENDER_URL:
-        webhook_url = f"{RENDER_URL}/webhook/{BOT_TOKEN}"
+        webhook_url = f"{RENDER_URL}/webhook/{BOT_API}"
         bot.remove_webhook()
         bot.set_webhook(url=webhook_url)
         print("Webhook set to:", webhook_url)
