@@ -6,11 +6,14 @@ import base64
 import requests
 import random
 import os 
+from flask import flask , request 
 
 BOT_API = os.getenv("BOT_API")
 GROQ_KEY = os.getenv("GROQ_KEY")
+RENDER_URL = os.getenv("RENDER_EXTERNAL_URL")
 
 bot = telebot.TeleBot(BOT_API)
+app = Flask(__name__)
 client = Groq(api_key=GROQ_KEY)
 
 SYSTEM_PROMPT = """You are Horikita Suzune from Classroom of the Elite.
